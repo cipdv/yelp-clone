@@ -1,0 +1,38 @@
+-install node
+-make a folder for server and client
+
+1. in server 
+
+    npm init -y
+    npm install express nodemon pg dotenv
+
+-in package.json, setup start script for nodemon:
+    -under scripts, add nodemon server.js
+    - to run the server, use the command npm start
+
+-make a server.js file
+    -require in express and set up port to listen on
+
+-npm install dotenv to handle environment variables
+
+-setup routes (1h20)
+    -plan GET, DELETE, POST, PUT for each routes
+    -use status 200 for get, 201 for post, 204 for delete
+-use postman to check routes
+    -setup a collection to save the routes that are tested often
+    -to do post requests to check if it's working before setting up client side, edit the body section (set to raw and json) and send a post request
+
+
+-express middleware 1:42
+    -define middleware just under const app = express();
+    -to define middleware, use app.use, don't forget to pass in next and run next(); to end whatever it is doing
+
+-express.json() will take the information we get from req.body and convert it into a JS object (1:56)
+
+CONNECT TO POSTGRES (2:03) - use node-postgres.com
+-npm install pg
+-setup db folder with index.js
+-add env variables to .env file and connect db in server.js
+**do not use strings or template literals in queries, leaves vulnerable for attacks, instead use parameterized query 
+
+-install cors and import into server.js so that we can allow api requests from other domains

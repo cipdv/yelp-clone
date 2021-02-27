@@ -1,0 +1,45 @@
+in client, npx create-react-app .
+install bootstrap and front end by adding links to index.html
+
+*rafce for react template 
+
+SETUP ROUTES:
+-npm install react-router-dom
+-setup a routes folder in script and put components into it 
+    -Home.jsx
+    -RestaurantDetailPage.jsx
+    -UpdatePage.jsx
+-setup routes in App.jsx  
+    -import browser router, switch, route from react-router-dom
+
+SETUP COMPONENTS:
+-setup components folder
+
+CONTEXT API (3:14)
+-make a context folder with a RestaurantContext.js file
+-set up context API
+-wrap App component in context API
+
+CONNECT TO API
+-npm install axios in client folder
+-run both server and client at same time in two terminal windows
+-setup apis folder with restaurantapi file
+-import axios and run axios.create
+-back in restuarant finder, we want to get the data from the api as soon as the component loads (import useEffect hook)
+    -we also want to get our data from the context, so import context api and destructure our setRestaurants from useContext
+    -then return the restaurant list by running setRestaurants in useEffect
+
+render list to the screen:
+-
+
+make inputs controlled inputs in add restaurants component
+-create a state variable for each input field with useState
+-set value of inputs to align with state variables, and set an onChange function for each
+-send post method to backend, include it as a handleSubmit function to be called when submit is clicked
+
+render updated list to screen once new book is added:
+-in context api, define a function to add restaurant
+-bring function into AddBook component and call it when button is clicked
+
+
+-4:30 to stop row selection from overriding delete and update buttons, pass in the event (e) and use stopPropagation.
